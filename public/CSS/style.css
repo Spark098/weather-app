@@ -1,8 +1,13 @@
 
-
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #283149;
+  background-image: url("../Images/scenery-2.jpg");  
+  /* background-image: url("/public/Images/scenery-2.jpg"); */
+  /* background-image: url("./public/Images/scenery-2.jpg"); */
+  /* background-image: url("public/Images/scenery-2.jpg"); */
+  
+  background-size: cover;
+  margin: 0;
 }
 
 h1 {
@@ -11,16 +16,18 @@ h1 {
   color: white;
   text-transform: uppercase;
   letter-spacing: 2px;
+  background-color: darkslategray;
+  padding: 5px;
+  margin: 0 0 20px 0;
 }
 
 .container {
-  /* border: 2px solid white; */
   width: 50%;
   margin: auto;
+  /* border: 2px solid white; */
 }
 
 input[type=text] {
-  background-color: #283149;
   border: none;
   border-bottom: 2px solid red;
 }
@@ -28,10 +35,8 @@ input:focus {
   background-color: white;
 }
 input::placeholder {
-  color: white;
   font-family: 'Roboto', sans-serif;
 }
-
 
 button {
   background-color: red;
@@ -40,7 +45,7 @@ button {
 }
 
 button:hover {
-   box-shadow: 0 3px 4px 0 #DBEDF3;
+  box-shadow: 0 3px 4px 0 #DBEDF3;
   opacity: 0.5;
 }
 
@@ -60,22 +65,25 @@ button:hover {
   width: 255px;
   text-align: center;
   border-radius: 12px;
-  /* border: 2px solid green; */
   margin-right: -70px;
   position: relative;
   right: 49px;
   bottom: 21px;
+  box-shadow: inset 0px 0px 5px 5px grey;
+  /* border: 2px solid green; */
 }
 .item-2 {
   text-align: center;
   background-color: lightgrey;
-  /* border: 2px solid yellow; */
   position: relative;
   bottom: 19px;
   width: 350px;
   left: 27px;
   border-radius: 12px;  
+  box-shadow: inset 0px 0px 5px 5px grey;
+  /* border: 2px solid yellow; */ 
 }
+
 h2 {
   text-transform: capitalize;
   line-height: 47px;

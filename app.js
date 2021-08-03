@@ -18,14 +18,12 @@ app.post("/", (req, res) => {
     const unit = "metric";
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apikey + "&units=" + unit;
 
-
-    let temp;
     https.get(url, (response) => {
         
         response.on("data", (data) => {
             const weatherData = JSON.parse(data);   // converted to JSON obj
             const weatherDes = weatherData.weather[0].description;
-            temp = weatherData.main.temp;
+            const temp = weatherData.main.temp;
             const icon = weatherData.weather[0].icon;
             const iconURL =  "http://openweathermap.org/img/wn/" + icon + "@2x.png";
             const temp_max = weatherData.main.temp_max;
@@ -33,21 +31,15 @@ app.post("/", (req, res) => {
             const pressure = weatherData.main.pressure;
             const humidity = weatherData.main.humidity;
 
-
-            console.log(".................................................");
-            console.log("TEMPERATURE: " + temp);
-            res.render("info", {cityName: query, icon: iconURL, temp: temp, desc: weatherDes, tempMx: temp_max, tempMn: temp_min, pre: pressure, hum: humidity});
-            
+            res.render("info", {cityName: query, icon: iconURL, temp: temp, desc: weatherDes, tempMx: temp_max, tempMn: temp_min, pre: pressure, hum: humidity});            
 
         })
     })
-
-    
     
 })
 
 
 app.listen(3000, () => {
-    console.log("Server running at 3000");
+    console.log("Server running at port: 3000");
 })
 
