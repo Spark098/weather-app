@@ -1,18 +1,41 @@
-<%- include("partials/header") -%> 
+<%- include("partials/header") -%>
 
-<div class="flex-box">    
-    <div class="item-1">
-        <h2 style="font-weight: bolder; font-size: xx-large;"><%= cityName %></h2>
-        <img src="<%= icon %>">
-        <h3><%= temp %> &#8451; </h3>
-        <h2><%= desc %></h2>
+    <div class="flex-box">
+        <div class="item-1">
+            <h2 style="font-weight: bolder; font-size: xx-large;">
+                <%= cityName %>
+            </h2>
+            <img src="<%= icon %>" alt="icon">
+            <% if(unit=="metric" ){ %>
+                <h3>
+                    <%= temp %> &#8451;
+                </h3>
+                <% } else{ %>
+                    <h3>
+                        <%= temp %> &#x2109;
+                    </h3>
+                    <% } %>
+
+                        <h2>
+                            <%= desc %>
+                        </h2>
+        </div>
+        <div class="item-2">
+
+            <% if(unit=="metric" ){ %>
+                <h2>Max. Temperature: <%= tempMx %> &#8451;</h2>
+                <h2>Min. Temperature: <%= tempMn %> &#8451;</h2>
+                <% } else{ %>
+                    <h3>
+                        <h2>Max. Temperature: <%= tempMx %> &#x2109;</h2>
+                        <h2>Min. Temperature: <%= tempMn %> &#x2109;</h2>
+                    </h3>
+                    <% } %>
+
+                        <h2 style="text-transform: none;">Pressure: <%= pre %> hPa</h2>
+                        <h2>Humidity: <%= hum %>%</h2>
+        </div>
+
+
     </div>
-    <div class="item-2">
-        <h2>Max. Temperature: <%= tempMx %> &#8451;</h2>
-        <h2>Min. Temperature: <%= tempMn %> &#8451;</h2>
-        <h2 style="text-transform: none;">Pressure: <%= pre %> hPa</h2>
-        <h2>Humidity: <%= hum %>%</h2>
-    </div>
-    
-</div>
-<%- include("partials/footer") %> 
+    <%- include("partials/footer") %>

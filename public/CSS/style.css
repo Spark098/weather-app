@@ -1,11 +1,7 @@
-
 body {
   font-family: 'Roboto', sans-serif;
-  background-image: url("../Images/scenery-2.jpg");  
-  /* background-image: url("/public/Images/scenery-2.jpg"); */
-  /* background-image: url("./public/Images/scenery-2.jpg"); */
-  /* background-image: url("public/Images/scenery-2.jpg"); */
-  
+  background-image: url("../Images/scenery-2.jpg");
+
   background-size: cover;
   margin: 0;
 }
@@ -24,16 +20,18 @@ h1 {
 .container {
   width: 50%;
   margin: auto;
-  /* border: 2px solid white; */
 }
 
 input[type=text] {
   border: none;
   border-bottom: 2px solid red;
+  height: 22px;
 }
+
 input:focus {
   background-color: white;
 }
+
 input::placeholder {
   font-family: 'Roboto', sans-serif;
 }
@@ -51,13 +49,12 @@ button:hover {
 
 .flex-box {
   display: flex;
-  color: black; 
+  color: black;
   width: 87%;
   border-radius: 12px;
   padding: 29px;
   padding-left: 49px;
   opacity: 0.8;
-  /* border: 2px solid yellow; */
 }
 
 .item-1 {
@@ -70,8 +67,8 @@ button:hover {
   right: 49px;
   bottom: 21px;
   box-shadow: inset 0px 0px 5px 5px grey;
-  /* border: 2px solid green; */
 }
+
 .item-2 {
   text-align: center;
   background-color: lightgrey;
@@ -79,12 +76,18 @@ button:hover {
   bottom: 19px;
   width: 350px;
   left: 27px;
-  border-radius: 12px;  
+  border-radius: 12px;
   box-shadow: inset 0px 0px 5px 5px grey;
-  /* border: 2px solid yellow; */ 
 }
 
 h2 {
   text-transform: capitalize;
   line-height: 47px;
+}
+
+#error {
+  background-color: #F37878;
+  padding: 5px;
+  margin-top: 10px;
+  font-weight: bold;
 }

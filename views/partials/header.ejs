@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"   rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <h1>Weather App</h1>
@@ -17,4 +19,11 @@
         <form action="/" method="post">
             <input type="text" name="cityName" placeholder="Enter the city name">
             <button type="submit">Search</button>
+            
+            <div id="unit">
+                <input type="radio" id="Celsius" name="unit" value="metric" checked>
+                <label for="Celsius">Celsius</label>
+                <input type="radio" id="Fahrenheit" name="unit" value="imperial">
+                <label for="Fahrenheit">Fahrenheit</label>
+            </div>
         </form>
