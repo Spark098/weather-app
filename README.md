@@ -16,11 +16,11 @@ Install it with npm
 To run the project type
 
 ```bash
-  node server.js
+  node app.js
 ```
 or 
 ```bash
-  nodemon server.js
+  nodemon app.js
 ```
 and then open http://localhost:3000/ in a new tab.
 
