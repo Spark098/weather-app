@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/weather.ico">
 </head>
 
 <body>
@@ -17,9 +18,9 @@
     <h1>Weather App</h1>
     <div class="container">
         <form action="/" method="post">
-            <input type="text" name="cityName" placeholder="Enter the city name">
+            <input type="text" name="cityName" placeholder="Enter the city name" autocomplete="off">
             <button type="submit">Search</button>
-            
+
             <div id="unit">
                 <input type="radio" id="Celsius" name="unit" value="metric" checked>
                 <label for="Celsius">Celsius</label>
