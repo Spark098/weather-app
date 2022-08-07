@@ -29,7 +29,9 @@ and then open http://localhost:3000/ in a new tab.
 ## NOTES
 
 📌 Temperature can be either in celsius or in fahrenheit. The default value is celsius.
+
 📌 For any place it fetches the current weather description, weather icon/symbol, max-temperature, min-temperature, pressure and humidity.
+
 📌 The project is unresponsive and suitable to be run on desktop and laptop.
 
 
